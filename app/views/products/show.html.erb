@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
-  <%= @product.title %>
+    <b>Title:</b>
+    <%=h @product.title %>
 </p>
-
 <p>
-  <strong>Description:</strong>
-  <%= @product.description %>
+    <b>Description:</b>
+    <%=h @product.description %>
 </p>
-
 <p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
+    <b>Image url:</b>
+    <%=h @product.image_url %>
 </p>
-
+<p>
+  	<b>Price:</b>
+   	<%=h @product.price %>
+</p>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

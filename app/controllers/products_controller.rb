@@ -61,6 +61,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  protected
+    def price_must_be_at_least_a_cent
+      errors.add(:price, 'should be at least 0.01' ) if price.nil? || price < 0.01
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -69,6 +74,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url)
+      params.require(:product).permit(:title, :description, :image_url, :price)
     end
 end
