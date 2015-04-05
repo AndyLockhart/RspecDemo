@@ -4330,3 +4330,759 @@ NoMethodError (undefined method `price_must_be_at_least_a_cent' for #<Product:0x
   Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-05 17:03:40 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.7ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:03:43 +0800
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-04-05 17:03:46 +0800
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-04-05 17:03:56 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMC1arzibzwN1T/uFL3wAX4KzYZ4093xxBHygLIqlr+y6ZSHBaIC+ay7Dz1WeTNAd/MxZ3IUBJkG4uLOjck14A==", "product"=>{"title"=>"Iphone6 Plus", "description"=>"aaa", "image_url"=>"huohuo", "price"=>"123"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `price_must_be_at_least_a_cent' for #<Product:0x007fa1c2158298>):
+  app/controllers/products_controller.rb:30:in `block in create'
+  app/controllers/products_controller.rb:29:in `create'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.7ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-04-05 17:05:56 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMC1arzibzwN1T/uFL3wAX4KzYZ4093xxBHygLIqlr+y6ZSHBaIC+ay7Dz1WeTNAd/MxZ3IUBJkG4uLOjck14A==", "product"=>{"title"=>"Iphone6 Plus", "description"=>"aaa", "image_url"=>"huohuo", "price"=>"123"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `price_must_be_at_least_a_cent' for #<Product:0x007fa1bd43a560>):
+  app/controllers/products_controller.rb:30:in `block in create'
+  app/controllers/products_controller.rb:29:in `create'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-04-05 17:08:34 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMC1arzibzwN1T/uFL3wAX4KzYZ4093xxBHygLIqlr+y6ZSHBaIC+ay7Dz1WeTNAd/MxZ3IUBJkG4uLOjck14A==", "product"=>{"title"=>"Iphone6 Plus", "description"=>"aaa", "image_url"=>"huohuo", "price"=>"123"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:12: syntax error, unexpected ||
+...least 0.01' ) if price.nil ? || price < 0.01 
+...                               ^):
+  app/models/product.rb:12: syntax error, unexpected ||
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:08:40 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:12: syntax error, unexpected ||
+...least 0.01' ) if price.nil ? || price < 0.01 
+...                               ^):
+  app/models/product.rb:12: syntax error, unexpected ||
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:08:40 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:12: syntax error, unexpected ||
+...least 0.01' ) if price.nil ? || price < 0.01 
+...                               ^):
+  app/models/product.rb:12: syntax error, unexpected ||
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:08:49 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:09:25 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:09:34 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ','
+   	validates_format_of :image_url =>, :with => %r{\.(gif|jpg|png)$}i,
+   	                                  ^
+/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end):
+  app/models/product.rb:6: syntax error, unexpected ','
+  app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:09:41 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:10:11 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ':', expecting keyword_end
+...es_format_of :image_url => ?, :with => %r{\.(gif|jpg|png)$}i,
+...                               ^
+/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end):
+  app/models/product.rb:6: syntax error, unexpected ':', expecting keyword_end
+  app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:10:39 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected '?'
+...dates_format_of :image_url => ? , :with => %r{\.(gif|jpg|png...
+...                               ^
+/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end):
+  app/models/product.rb:6: syntax error, unexpected '?'
+  app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (25.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:10:40 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected '?'
+...dates_format_of :image_url => ? , :with => %r{\.(gif|jpg|png...
+...                               ^
+/Users/andylockhart/Documents/study/agi_rails_proj/depot/app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end):
+  app/models/product.rb:6: syntax error, unexpected '?'
+  app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:11:02 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:11:30 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:11:31 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:13:48 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (Either :with or :without must be supplied (but not both)):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:14:02 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:17:32 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:17:33 +0800
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/product.rb:6:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/andylockhart/.rvm/gems/ruby-2.1.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.9ms)
+
+
+Started PUT "/console/repl_sessions/477e5b67e6003b1ec2d5d5db9ad3dc6d" for 127.0.0.1 at 2015-04-05 17:17:39 +0800
+
+
+Started PUT "/console/repl_sessions/477e5b67e6003b1ec2d5d5db9ad3dc6d" for 127.0.0.1 at 2015-04-05 17:17:48 +0800
+
+
+Started PUT "/console/repl_sessions/477e5b67e6003b1ec2d5d5db9ad3dc6d" for 127.0.0.1 at 2015-04-05 17:17:54 +0800
+
+
+Started GET "/products" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:16 +0800
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-04-05 17:19:21 +0800
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxUNSJUu0dHVCJm6p1r38ix69JmPSoWjKXNbL55RFxlhPCylLG68FHRmqWnlnjSzJYMIeIWNXMvrgEthobK0Rg==", "product"=>{"title"=>"c book", "description"=>"c book desc", "image_url"=>"/images/cbook.jpg", "price"=>"123"}, "commit"=>"Create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = 'c book' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "c book"], ["description", "c book desc"], ["image_url", "/images/cbook.jpg"], ["price", 123.0], ["created_at", "2015-04-05 09:19:43.705021"], ["updated_at", "2015-04-05 09:19:43.705021"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/products/6
+Completed 302 Found in 52ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:43 +0800
+
+
+Started GET "/products/6/edit" for 127.0.0.1 at 2015-04-05 17:19:47 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered products/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/products/6" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o+rg+Rjds+5C2Y981pYKQnniavhzaQOo8yFyw5X+ZQC1w8EUoZ3eK+O3v6+UUskDcBuWGXmu2sAx0mKNqh3GXw==", "product"=>{"title"=>"c book", "description"=>"c book desc", "image_url"=>"/images/cbook.jpg", "price"=>"-123"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'c book' AND "products"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 62ms (Views: 52.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:50 +0800
+
+
+Started PATCH "/products/6" for 127.0.0.1 at 2015-04-05 17:19:51 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXQp9wLc2R3WsH9Za3HB0DjPF0AQOa9j19JcojG0KEnbXQgau5y02HfeT4optQKRMTbroRr+dgsVIUzsDleLFg==", "product"=>{"title"=>"c book", "description"=>"c book desc", "image_url"=>"/images/cbook.jpg", "price"=>"-123"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'c book' AND "products"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started PATCH "/products/6" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7oLFXdyCnKHhVxCtdFJurfw21TT1kPDv2LAmKNQ1+EH4q+SwZcLxZEA5IH42lq3s9c8p1f9XKYcaQzZm69ZbHg==", "product"=>{"title"=>"c book", "description"=>"c book desc", "image_url"=>"/images/cbook.jpg", "price"=>"-123"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'c book' AND "products"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started PATCH "/products/6" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PlsUHcz830K49EGjir0T41Qw4JIR8swtK7STs7Rl0+gocjXwdbyyhxmacXDIedCiXckccxs1FUXpR4P9i4Zwtw==", "product"=>{"title"=>"c book", "description"=>"c book desc", "image_url"=>"/images/cbook.jpg", "price"=>"-123"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'c book' AND "products"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/scaffolds-5e89b74f390e060e11cf9052cbde0eae.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-86eb1d2d2081c81650e0ad3e2b4667b9.css?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-04-05 17:19:52 +0800

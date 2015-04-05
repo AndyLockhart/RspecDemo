@@ -61,11 +61,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  protected
-    def price_must_be_at_least_a_cent
-      errors.add(:price, 'should be at least 0.01' ) if price.nil? || price < 0.01
-    end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
